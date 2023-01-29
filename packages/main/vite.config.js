@@ -18,10 +18,11 @@ const config = {
       '/@/': join(PACKAGE_ROOT, 'src') + '/',
     },
   },
+  ssr: { 
+    noExternal: ['foo'],
+  },
   build: {
-    ssr: { 
-      noExternal: ['foo'],
-    },
+    ssr: true,
     sourcemap: 'inline',
     target: `node${node}`,
     outDir: 'dist',

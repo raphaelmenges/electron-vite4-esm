@@ -2,6 +2,7 @@ import {app} from 'electron';
 import './security-restrictions';
 import {restoreOrCreateWindow} from '/@/mainWindow';
 import {platform} from 'node:process';
+import hello from 'foo';
 
 /**
  * Prevent electron from running multiple instances.
@@ -77,3 +78,5 @@ if (import.meta.env.PROD) {
     })
     .catch(e => console.error('Failed check and install updates:', e));
 }
+
+hello();

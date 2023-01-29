@@ -19,7 +19,9 @@ const config = {
     },
   },
   build: {
-    ssr: true,
+    ssr: { 
+      noExternal: ['foo'],
+    },
     sourcemap: 'inline',
     target: `node${node}`,
     outDir: 'dist',
